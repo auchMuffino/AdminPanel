@@ -1,0 +1,30 @@
+.gradient-background{
+    -fx-background-color:linear-gradient(from 25% 25% to 100% 100%, #FF146A , #FFEB27);
+}
+.container{
+    -fx-background-color:rgba(255,255,255,0.2);
+    -fx-background-radius:10;
+}
+.shadow{
+    -fx-effect:dropShadow(three-pass-box, rgba(0,0,0,0.2), 10.0, 0.0, 0.0, 10.0);
+}
+.list{
+    -fx-background-color:rgba(64,64,64,0.3);
+    -fx-background-radius:1;
+}
+.selected-button-container{
+    -fx-background-color:rgba(255,255,255,0.15);
+}
+.button-container-mouse-moved:hover{
+    -fx-background-color:rgba(255,255,255,0.1);
+}
+.good{
+    -fx-background-color:rgba(139,0,139,0.33);
+    -fx-background-radius:10;
+}
+.pane-white{
+    -fx-background-color:rgb(255,255,255);
+}
+.transparent-element{
+    -fx-background:transparent;
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1915.0" styleClass="gradient-background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="needs.adminpanel.MainWindow">
+   <top>
+      <HBox prefHeight="51.0" prefWidth="1915.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="BOTTOM_CENTER" lineSpacing="20.0" prefHeight="52.0" prefWidth="287.0" styleClass="shadow" stylesheets="@style.css" text="АДМИНСКАЯ ПАНЕЛЬ" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni 72 Book" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="290.0" spacing="20.0" styleClass="container" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="290.0" styleClass="container">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@img/icons8-brain-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" prefHeight="31.0" prefWidth="175.0" styleClass="shadow" stylesheets="@style.css" text="Умный каталог" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="shoppingList" alignment="CENTER" prefHeight="61.0" prefWidth="290.0" styleClass="button-container-mouse-moved" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@img/icons8-cheque-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" prefHeight="23.0" prefWidth="158.0" styleClass="shadow" stylesheets="@style.css" text="Список покупок" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="products" alignment="CENTER" prefHeight="61.0" prefWidth="290.0" styleClass="button-container-mouse-moved" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@img/icons8-confectionery-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" prefHeight="23.0" prefWidth="158.0" styleClass="shadow" stylesheets="@style.css" text="Товары" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="salles" alignment="CENTER" prefHeight="61.0" prefWidth="290.0" styleClass="button-container-mouse-moved" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@img/icons8-sale-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" prefHeight="23.0" prefWidth="158.0" styleClass="shadow" stylesheets="@style.css" text="Акции" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="stores" alignment="CENTER" prefHeight="61.0" prefWidth="290.0" styleClass="button-container-mouse-moved" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@img/icons8-shop-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" prefHeight="23.0" prefWidth="158.0" styleClass="shadow" stylesheets="@style.css" text="Сети магазинов" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="costs" alignment="CENTER" prefHeight="61.0" prefWidth="290.0" styleClass="button-container-mouse-moved" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@img/icons8-price-tag-euro-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" prefHeight="23.0" prefWidth="158.0" styleClass="shadow" stylesheets="@style.css" text="Цены" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="functions" alignment="CENTER" prefHeight="61.0" prefWidth="290.0" styleClass="button-container-mouse-moved" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@img/icons8-advanced-search-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" prefHeight="23.0" prefWidth="158.0" styleClass="shadow" stylesheets="@style.css" text="Функции" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <HBox fx:id="workSpace" alignment="CENTER" prefHeight="792.0" prefWidth="1295.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
