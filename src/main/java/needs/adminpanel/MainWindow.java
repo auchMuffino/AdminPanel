@@ -2,17 +2,14 @@ package needs.adminpanel;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 import needs.importantclasses.*;
 
 import java.io.IOException;
@@ -44,7 +41,7 @@ public class MainWindow implements Initializable {
     @FXML
     private HBox workSpace;
 
-    static ObservableList<Price> prices = FXCollections.observableArrayList();
+    public static ObservableList<Price> prices = FXCollections.observableArrayList();
     static ObservableList<ChainStore> chainStores = FXCollections.observableArrayList();
     static ObservableList<Good> goods = FXCollections.observableArrayList();
     static ObservableList<Promotion> promotions = FXCollections.observableArrayList();
@@ -65,8 +62,8 @@ public class MainWindow implements Initializable {
                 try {
                     workSpace.getChildren().removeAll(workSpace.getChildren());
                     FXMLLoader fxmlLoader=new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("shoppingList.fxml"));
-                    AnchorPane anchorPane=fxmlLoader.load();
+                    fxmlLoader.setLocation(getClass().getResource("ShoppingList.fxml"));
+                    BorderPane anchorPane=fxmlLoader.load();
                     workSpace.getChildren().addAll(anchorPane);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -81,8 +78,8 @@ public class MainWindow implements Initializable {
                 try {
                     workSpace.getChildren().removeAll(workSpace.getChildren());
                     FXMLLoader fxmlLoader=new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("stores.fxml"));
-                    AnchorPane anchorPane=fxmlLoader.load();
+                    fxmlLoader.setLocation(getClass().getResource("Shops.fxml"));
+                    BorderPane anchorPane=fxmlLoader.load();
                     workSpace.getChildren().addAll(anchorPane);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -97,8 +94,8 @@ public class MainWindow implements Initializable {
                 try {
                     workSpace.getChildren().removeAll(workSpace.getChildren());
                     FXMLLoader fxmlLoader=new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("salles.fxml"));
-                    AnchorPane anchorPane=fxmlLoader.load();
+                    fxmlLoader.setLocation(getClass().getResource("Promo.fxml"));
+                    BorderPane anchorPane=fxmlLoader.load();
                     workSpace.getChildren().addAll(anchorPane);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -113,7 +110,7 @@ public class MainWindow implements Initializable {
                 try {
                     workSpace.getChildren().removeAll(workSpace.getChildren());
                     FXMLLoader fxmlLoader=new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("good.fxml"));
+                    fxmlLoader.setLocation(getClass().getResource("products.fxml"));
                     BorderPane anchorPane=fxmlLoader.load();
                     workSpace.getChildren().addAll(anchorPane);
                 } catch (IOException ex) {
@@ -145,8 +142,8 @@ public class MainWindow implements Initializable {
                 try {
                     workSpace.getChildren().removeAll(workSpace.getChildren());
                     FXMLLoader fxmlLoader=new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("costs.fxml"));
-                    AnchorPane anchorPane=fxmlLoader.load();
+                    fxmlLoader.setLocation(getClass().getResource("Prices.fxml"));
+                    BorderPane anchorPane=fxmlLoader.load();
                     workSpace.getChildren().addAll(anchorPane);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
@@ -187,7 +184,7 @@ public class MainWindow implements Initializable {
             for(ChainStore store:chainStores)
                 if(store.getPayersRegistrationNumber().equals(freshPromotions.getString(4)))
                     s=store;
-            promotions.add(new Promotion(freshPromotions.getInt(1),g,freshPromotions.getString(3),s,freshPromotions.getString(5),freshPromotions.getString(6), freshPromotions.getDate(7), freshPromotions.getDate(8)));
+            promotions.add(new Promotion(freshPromotions.getInt(1),g,freshPromotions.getString(3),s,freshPromotions.getString(5),freshPromotions.getString(6), freshPromotions.getDate(7), freshPromotions.getDate(8),freshPromotions.getDouble(9)));
         }
         while(freshPrices.next()){
             Good g=null;

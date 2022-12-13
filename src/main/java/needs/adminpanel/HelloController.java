@@ -7,13 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import needs.importantclasses.DBConnection;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class HelloController{
     final String password="Admin123456";
     @FXML
     private TextField passwordField;
@@ -44,9 +41,5 @@ public class HelloController implements Initializable {
             stage.show();
             enterButton.getScene().getWindow().hide();
         }
-    }
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        //
     }
 }

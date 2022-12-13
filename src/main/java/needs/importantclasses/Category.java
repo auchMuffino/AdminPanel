@@ -19,6 +19,7 @@ public class Category {
     public String getTitle(){
         return title.get();
     }
+    @Override
     public String toString(){
         return title.get();
     }

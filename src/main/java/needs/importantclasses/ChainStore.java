@@ -14,7 +14,6 @@ public class ChainStore {
         this.legalName=new SimpleStringProperty(legalName);
         this.businessAddress=new SimpleStringProperty(businessAddress);
     }
-
     public String getPayersRegistrationNumber() {
         return payersRegistrationNumber.get();
     }
@@ -26,5 +25,9 @@ public class ChainStore {
     }
     public String getBusinessAddress() {
         return businessAddress.get();
+    }
+    @Override
+    public String toString() {
+        return title.get();
     }
 }

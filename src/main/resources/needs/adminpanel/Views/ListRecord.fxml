@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1295.0" styleClass="button-container-mouse-moved" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="needs.adminpanel.ListController">
+   <center>
+      <Label fx:id="goodTitle" contentDisplay="CENTER" prefHeight="17.0" prefWidth="1261.0" styleClass="shadow" stylesheets="@../style.css" text="Label" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="3.0" right="3.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </center>
+   <right>
+      <HBox alignment="CENTER" prefHeight="27.0" prefWidth="478.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="goodCost" prefHeight="29.0" prefWidth="483.0" styleClass="shadow" stylesheets="@../style.css" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="3.0" right="3.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fx:id="garbage" fitHeight="28.0" fitWidth="143.0" onMousePressed="#click" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+               <image>
+                  <Image url="@../img/garbage.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="3.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </right>
+   <bottom>
+      <Pane prefHeight="1.0" prefWidth="200.0" styleClass="pane-white" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="3.0" right="3.0" top="2.0" />
+         </BorderPane.margin>
+      </Pane>
+   </bottom>
+</BorderPane>

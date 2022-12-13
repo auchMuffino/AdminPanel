@@ -7,12 +7,11 @@ public class DBConnection {
 
     public static void openConnection(){
         try {
-            connection = DriverManager.getConnection("jdbc:MySQL://localhost:3306/GoodsAndPromotions?characterEncoding=latin1","root","1234567890123");
+            connection = DriverManager.getConnection("jdbc:MySQL://localhost:3306/GoodsAndPromotions","root","1234567890123");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-
     public static void closeConnection(){
         try {
             if(!connection.isClosed()){
@@ -47,10 +46,9 @@ public class DBConnection {
             throw new RuntimeException(e);
         }
     }
-
     public static Connection getConnection() {
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/GoodsAndPromotions?characterEncoding=latin1","root","1234567890123");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/GoodsAndPromotions","root","1234567890123");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

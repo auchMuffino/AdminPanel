@@ -10,6 +10,8 @@ module needs.adminpanel {
 //    requires eu.hansolo.tilesfx;
     requires java.sql;
     requires mysql.connector.j;
+    requires commons.lang3;
+    requires spire.xls;
 
     opens needs.adminpanel to javafx.fxml;
     opens needs.importantclasses to javafx.fxml;

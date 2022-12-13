@@ -1,12 +1,13 @@
 package needs.importantclasses;
 
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 import java.util.Date;
 
-public class Promotion {
+public class Promotion{
     private SimpleIntegerProperty number;
     private SimpleObjectProperty<Good> good;
     private SimpleStringProperty title;
@@ -15,8 +16,9 @@ public class Promotion {
     private SimpleStringProperty picturePath;
     private SimpleObjectProperty<Date> startDate;
     private SimpleObjectProperty<Date> endDate;
+    private SimpleDoubleProperty discount;
 
-    public Promotion(int number, Good good, String title, ChainStore store, String description, String picturePath, Date startDate, Date endDate){
+    public Promotion(int number, Good good, String title, ChainStore store, String description, String picturePath, Date startDate, Date endDate,double discount){
         this.number=new SimpleIntegerProperty(number);
         this.good=new SimpleObjectProperty<Good>(good);
         this.title=new SimpleStringProperty(title);
@@ -25,8 +27,8 @@ public class Promotion {
         this.picturePath=new SimpleStringProperty(picturePath);
         this.startDate=new SimpleObjectProperty<Date>(startDate);
         this.endDate=new SimpleObjectProperty<Date>(endDate);
+        this.discount=new SimpleDoubleProperty(discount);
     }
-
     public int getNumber() {
         return number.get();
     }
@@ -50,5 +52,12 @@ public class Promotion {
     }
     public Date getEndDate() {
         return endDate.get();
+    }
+    public double getDiscount() {
+        return discount.get();
+    }
+    @Override
+    public String toString(){
+        return title.get();
     }
 }

@@ -21,7 +21,6 @@ public class Good {
         this.description=new SimpleStringProperty(description);
         this.countryOfOrigin=new SimpleStringProperty(countryOfOrigin);
     }
-
     public String getArticleNumber() {
         return articleNumber.get();
     }
@@ -42,5 +41,9 @@ public class Good {
     }
     public String getCountryOfOrigin() {
         return countryOfOrigin.get();
+    }
+    @Override
+    public String toString(){
+        return this.title.get();
     }
 }
